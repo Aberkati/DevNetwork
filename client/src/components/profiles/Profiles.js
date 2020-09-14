@@ -17,7 +17,8 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Fragment>
           <h1 className="large text-primary">Développeurs</h1>
           <p className="lead">
-            <i className="fab fa-connectdevelop" /> A Voir
+            <i className="fab fa-connectdevelop" /> La liste de nos meilleurs
+            développeurs
           </p>
           <div className="profiles">
             {profiles.length > 0 ? (
@@ -43,7 +44,4 @@ const mapStateToProps = state => ({
   profile: state.profile
 });
 
-export default connect(
-  mapStateToProps,
-  { getProfiles }
-)(Profiles);
+export default connect(mapStateToProps, { getProfiles })(Profiles);
